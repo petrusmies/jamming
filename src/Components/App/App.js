@@ -12,11 +12,7 @@ class App extends React.Component {
     super(props);
 
     this.state= {
-      searchResults: [{id: 1,
-        name: 'Nimi',
-        artist: 'Artisti',
-        album: 'Album',
-        uri: 'track.uri'}],
+      searchResults: [],
       playlistName: 'My playlist',
       playlistTracks: [],
     };
@@ -26,6 +22,7 @@ class App extends React.Component {
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
     this.search = this.search.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   addTrack(track) {
@@ -64,6 +61,10 @@ class App extends React.Component {
     Spotify.search(term).then(searchResults => {
       this.setState({searchResults: searchResults})
     });
+  }
+
+  componentDidMount() {
+    window.addEventListener('load', Spotify.search(''));
   }
 
   render() {

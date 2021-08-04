@@ -12,7 +12,11 @@ class App extends React.Component {
     super(props);
 
     this.state= {
-      searchResults: [],
+      searchResults: [{id: 1,
+        name: 'Nimi',
+        artist: 'Artisti',
+        album: 'Album',
+        uri: 'track.uri'}],
       playlistName: 'My playlist',
       playlistTracks: [],
     };

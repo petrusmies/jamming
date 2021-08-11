@@ -1,3 +1,8 @@
+# Jamming Project
+
+Final project in Codecademy skill path: Create a Front-End App with React.
+A React App for custom playlists that combines multiple components, interactive search functionality, and requests to the Spotify API.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
